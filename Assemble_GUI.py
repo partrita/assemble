@@ -113,7 +113,7 @@ class MainWindow(wx.Frame):
     def OnLoad(self,e):
         """ Open a file"""
         infile=-1
-        dlg = wx.FileDialog(self, "Choose a file", self.dirname, "", "*", wx.OPEN)
+        dlg = wx.FileDialog(self, "Choose a file", self.dirname, "", "*", wx.FD_OPEN)
         if dlg.ShowModal() == wx.ID_OK:
             self.filename = dlg.GetFilename()
             self.dirname = dlg.GetDirectory()
